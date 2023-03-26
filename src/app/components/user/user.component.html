@@ -1,0 +1,8 @@
+<div class="card">
+    <h2>{{user.firstname}} {{user.lastname}}</h2>
+    <img [src]="user.image" [alt]="user.lastname">
+    <p>Website: {{user.website}}</p>
+    <p-button styleClass="p-button-raised p-button-secondary" (click)="isVisible=!isVisible">
+        {{isVisible? 'Hide e-mail': 'Show e-mail'}}</p-button>
+    <p *ngIf="isVisible">E-mail: {{user.email}}</p>
+</div>
